@@ -12,7 +12,7 @@
  import java.util.*;
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        HashSet<ListNode> hash = new HashSet<>();
+        /*HashSet<ListNode> hash = new HashSet<>();
         while(headA !=null){
             hash.add(headA);
             headA = headA.next;
@@ -26,5 +26,14 @@ public class Solution {
             }
         }
         return headB;
+
+        */
+        ListNode listA = headA;
+        ListNode listB = headB;
+        while(listA != listB) {
+            listA = listA != null ? listA.next: headA;
+            listB = listB != null ? listB.next: headB;
+        }
+        return listA;
     }
 }
