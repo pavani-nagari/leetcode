@@ -10,9 +10,7 @@ class Solution {
             count.put(nums[i], val);
 
             if(val > (nums.length / 2) ) {
-                //max_count = val;
-                target = nums[i];
-                break;
+                return nums[i];
             }
             i++;
         }
