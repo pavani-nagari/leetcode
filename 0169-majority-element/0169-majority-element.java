@@ -9,8 +9,8 @@ class Solution {
             int val = count.getOrDefault(nums[i],0)+1;
             count.put(nums[i], val);
 
-            if(val > max_count && val > (nums.length / 2) ) {
-                max_count = val;
+            if(val > (nums.length / 2) ) {
+                //max_count = val;
                 target = nums[i];
                 break;
             }
